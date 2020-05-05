@@ -80,27 +80,17 @@ namespace WinFormsWithTransparentBackground
             AnimateWindow(this.Handle, 500, AW_SLIDE | AW_HOR_POSITIVE);
         }
 
-        private void NC_Panel_MouseMove(object sender, MouseEventArgs e)
+        private void SizeChanged_Panel_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                this.Size = new Size(this.Width, this.PointToClient(MousePosition).Y);
-            }
-        }
-
-        private void NWSE_Panel_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                this.Size = new Size(this.PointToClient(MousePosition).X, this.PointToClient(MousePosition).Y);
-            }
-        }
-
-        private void WE_Panel_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                this.Size = new Size(this.PointToClient(MousePosition).X, this.Height);
+                var panelka = (Panel)sender;
+                if(panelka.Name == "NC_Panel")
+                    this.Size = new Size(this.Width, this.PointToClient(MousePosition).Y);
+                else if(panelka.Name == "NWSE_Panel")
+                    this.Size = new Size(this.PointToClient(MousePosition).X, this.PointToClient(MousePosition).Y);
+                else if(panelka.Name == "WE_Panel")
+                    this.Size = new Size(this.PointToClient(MousePosition).X, this.Height);
             }
         }
     }

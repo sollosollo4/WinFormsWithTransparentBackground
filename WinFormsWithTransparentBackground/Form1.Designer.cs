@@ -152,7 +152,7 @@
             this.NC_Panel.Name = "NC_Panel";
             this.NC_Panel.Size = new System.Drawing.Size(714, 2);
             this.NC_Panel.TabIndex = 2;
-            this.NC_Panel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.NC_Panel_MouseMove);
+            this.NC_Panel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.SizeChanged_Panel_MouseMove);
             // 
             // NWSE_Panel
             // 
@@ -164,7 +164,7 @@
             this.NWSE_Panel.Name = "NWSE_Panel";
             this.NWSE_Panel.Size = new System.Drawing.Size(3, 3);
             this.NWSE_Panel.TabIndex = 3;
-            this.NWSE_Panel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.NWSE_Panel_MouseMove);
+            this.NWSE_Panel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.SizeChanged_Panel_MouseMove);
             // 
             // WE_Panel
             // 
@@ -177,7 +177,7 @@
             this.WE_Panel.Name = "WE_Panel";
             this.WE_Panel.Size = new System.Drawing.Size(2, 509);
             this.WE_Panel.TabIndex = 4;
-            this.WE_Panel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.WE_Panel_MouseMove);
+            this.WE_Panel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.SizeChanged_Panel_MouseMove);
             // 
             // SN_Panel
             // 
